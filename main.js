@@ -144,6 +144,6 @@ function reset(){
     firstNum = null
     secNum = null
     operation = null
-    document.getElementById("content").innerHTML = "000"
-    alert("Machine reseted");
+    document.getElementById("content").innerHTML = "RESET"
+    setTimeout(() => {  document.getElementById("content").innerHTML = "000"; }, 1000);
 }
