@@ -112,7 +112,6 @@ function calculate(){
     {
         power();
     }
-    
 }
 
 function plus(){
@@ -127,6 +126,7 @@ function less(){
 
 function div(){
     result = firstNum / secNum;
+    result = result.toFixed(7);
     document.getElementById("content").innerHTML = result;
 }
 
