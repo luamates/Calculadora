@@ -59,6 +59,18 @@ function caseLess(){
     operation = 1
 }
 
+function caseDiv(){
+    operation = 2
+}
+
+function caseTimes(){
+    operation = 3
+}
+
+function casePwr(){
+    operation = 4
+}
+
 function setNumber(){
     if(firstNum == null)
     {
@@ -84,9 +96,21 @@ function calculate(){
     {
         plus();
     }
-    else
+    else if(operation == 1)
     {
         less();
+    }
+    else if(operation == 2)
+    {
+        div();
+    }
+    else if(operation == 3)
+    {
+        times();
+    }
+    else
+    {
+        power();
     }
     
 }
@@ -98,6 +122,21 @@ function plus(){
 
 function less(){
     result = firstNum - secNum;
+    document.getElementById("content").innerHTML = result;
+}
+
+function div(){
+    result = firstNum / secNum;
+    document.getElementById("content").innerHTML = result;
+}
+
+function times(){
+    result = firstNum * secNum;
+    document.getElementById("content").innerHTML = result;
+}
+
+function power(){
+    result = Math.pow(firstNum, secNum);
     document.getElementById("content").innerHTML = result;
 }
 
